@@ -9,22 +9,24 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+
 */
 
-
-Route::get('/', function () {
+Route::get('/front', function () {
     return view('front-views.layouts.master');
-});
+})->name('myRoute')->defaults('Menu','SMS App');
 
-Route::get('{any}', 'VeltrixController@index');
 
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('/dashboard','ViewsControllers\DashboardController@showDashboard')->name('dashboard');
+//Route::get('{any}', 'VeltrixController@index');
 
-    Route::group(['prefix' => 'home-page'], function () {
-        Route::get('slider','ActionControllers\SliderController@sliders')->name('homepage.slider');
+Route::group(['prefix' => 'admin','Title' => 'Admin'], function () {
 
-        Route::get('customers','ActionControllers\ImageComponentController@customers')->name('homepage.customers');
+    Route::get('/','SiteController@setup')->name('site.setup')->defaults('Menu','Setup Page');;
+    Route::get('/dashboard','ViewsControllers\DashboardController@showDashboard')->name('dashboard')->defaults('Menu','Dashboard');;
+
+    Route::group(['prefix' => 'app','Title' => 'Customers'], function () {
+        Route::get('slider','ActionControllers\SliderController@sliders')->name('homepage.slider')->defaults('Menu','Slider Page');;
+        Route::get('customers','ActionControllers\ImageComponentController@customers')->name('homepage.customers')->defaults('Menu','Customers Page');;
     });
 
     Route::group(['prefix' => 'does'], function () {

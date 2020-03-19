@@ -7,20 +7,27 @@
                         <!-- Left Menu Start -->
                         <ul class="metismenu" id="side-menu">
                             <li class="menu-title">Main</li>
-                            <li>
-                                <a href="index" class="waves-effect">
-                                    <i class="ti-home"></i><span class="badge badge-primary badge-pill float-right">2</span> <span> Dashboard </span>
-                                </a>
-                            </li>
 
-                            <li>
-                                <a href="javascript:void(0);" class="waves-effect"><i class="ti-email"></i><span> Home Page <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
-                                <ul class="submenu">
-                                    <li><a href="{{route('homepage.slider')}}">Slider</a></li>
-                                    <li><a href="email-read">Content</a></li>
-                                    <li><a href="{{route('homepage.customers')}}">Our Customers</a></li>
-                                </ul>
-                            </li>
+                                @foreach($Menu as $key => $menuItem)
+                                    @if($key == 'independent')
+                                        @foreach ($menuItem['items'] as $item)
+                                            <li>
+                                                <a href="index" class="waves-effect">
+                                                    <i class="ti-home"></i><span class="badge badge-primary badge-pill float-right">2</span> <span> {{$item->title}} </span>
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    @else
+                                        <li>
+                                            <a href="javascript:void(0);" class="waves-effect"><i class="ti-email"></i><span> {{$menuItem['title']}}  <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                                            <ul class="submenu">
+                                                @foreach ($menuItem['items'] as $item)
+                                                    <li><a href="{{route('homepage.slider')}}">{{$item->title}}</a></li>
+                                                @endforeach
+                                            </ul>
+                                        </li>
+                                     @endif
+                                @endforeach
 
                             {{-- <li class="menu-title">Components</li>
 
