@@ -1,0 +1,201 @@
+/* Large Devices, Wide Screens*/
+@media only screen and (max-width : 1199.98px) {
+
+
+
+
+
+
+
+
+/*
+    End This Query
+*/
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991.98px) {
+.service-details h4::before {
+	top: 17px;
+	right: 105%;
+	width: 200px;
+}
+.single-slideshow-area .box-btn-slide {
+	position: static;
+	width: 100%;
+	left: auto;
+	right: auto;
+}
+.single-slideshow-area .box-btn-slide {
+	position: static;
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+.single-slideshow-area.content-box {
+	margin-bottom: 159px;
+}
+.single-slideshow-area .box-btn-slide .cap-box-info {
+	width: 100%;
+	background: #1F1F1F;
+}
+
+
+/*
+    End This Query
+*/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767.98px) {
+.eskor_slideshow_area .eskor_slideshow_content .content-area h2 {
+	font-size: 32px;
+	line-height: 46px;
+}
+.eskor_slideshow_area .slideshow-control .counter-slideshow .counter-area .counter .counter-num {
+	font-size: 60px;
+	line-height: 90px;
+}
+.eskor_slideshow_area .slideshow-control .counter-slideshow .counter-area .counter {
+	right: 24px;
+}
+.eskor_slideshow_area .slideshow-control .slideshow-pagination .pagination {
+	margin-right: 20px;
+}
+.eskor_slideshow_area .slideshow-control .slideshow-pagination .pagination.swiper-pagination-bullet-active .pagination-line {
+	width: 20px;
+}
+.eskor_slideshow_area .slideshow-control .slideshow-pagination .pagination.swiper-pagination-bullet-active {
+	margin-right: 41px;
+}
+.eskor_slideshow_area .slideshow-control .eskor-slide-nav {
+	right: 73px;
+}
+.parallax-box {
+	height: 70vh;
+}
+.pt-150 {
+	padding-top: 110px;
+}
+.pb-150 {
+	padding-bottom: 90px;
+}
+.btn-big h2 .separator {
+	top: 122%;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+}
+.btn-scroll-down {
+	left: 90%;
+}
+.eskor_slideshow_area .slideshow-control .counter-slideshow {
+	height: 92px;
+}
+.eskor_slideshow_area .eskor_slideshow {
+	height: 85vh;
+}
+.parallax-box {
+	height: 60vh;
+}
+.parallax-box-area .cap-box {
+	bottom: 0;
+	right: 0;
+	width: 100%;
+}
+.cap-box-info {
+	width: 100%;
+}
+.sk-portfolio .cbp-item .portfolio-item .portfolio-cap-box {
+	width: 100%;
+	left: 0;
+	bottom: 15px;
+}
+.sk-portfolio .cbp-item .portfolio-item .portfolio-cap-box .cap-box-info {
+	width: 100%;
+	padding: 15px 20px;
+}
+.sk-portfolio .cbp-item .portfolio-item .portfolio-cap-box .cap-box-info .text-info {
+	margin-bottom: 29px;
+}
+.sk-portfolio .portfolio-filter .cbp-filter-item {
+	margin-right: 0;
+	margin-bottom: 17px;
+	padding: 0 12px;
+}
+
+/*
+    End This Query
+*/
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 575.98px) {
+.parallax-box {
+	height: 260px;
+}
+.cap-box-info {
+	padding: 15px;
+}
+.parallax-box .cap-box {
+	bottom: 12px;
+	right: 0;
+	width: 100%;
+}
+.btn-box {
+	margin-top: 17px;
+}
+.parallax-box-area .cap-box {
+	bottom: 13px;
+	right: 13px;
+	position: static;
+	background: #05161D;
+}
+.cap-box-info .text-info {
+	margin-right: auto;
+}
+.btn-box {
+	margin-top: 0;
+}
+
+.parallax-box-area .cap-box {
+	top: ;
+	margin-bottom: ;
+	position: relative;
+	left: 0;
+	bottom: 24px;
+}
+.sm-nav-area {
+	width: 80%;
+}
+
+
+/*
+    End This Query
+*/
+}
+
+/* Small Phone */ 
+@media only screen and (max-width : 480.98px) {
+
+
+
+
+/*
+    End This Query
+*/
+}
+
+/* Small Phone */ 
+@media only screen and (max-width : 360.98px) {
+
+
+
+
+/*
+    End This Query
+*/
+}
+    

@@ -1,0 +1,160 @@
+@import url('../webfonts/UniSans/stylesheet.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+$ff-u: 'Segoe Pro Display';
+$ff-u-sb: 'UniSansSemiBold';
+$ff-u-b: 'Segoe Pro';
+$ff-m: 'Montserrat', sans-serif;
+
+
+$theme-color: #FFD414;
+body {
+    font-family: $ff-u;
+    font-size: 18px;
+    line-height: 24px;
+    color: #464646;
+    background: #F6F9FB;
+}
+img{
+    vertical-align: bottom;
+    max-width: 100%;
+}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6 .h6 {
+    color: #05161D;  
+}
+
+h1 {
+    font-size: 39px;
+    line-height: 1.4em;
+} 
+h2 {
+    font-size: 39px;
+    line-height: 45px;
+    letter-spacing: 0;
+}
+h3 {
+    font-size: 28px;
+    line-height: 32px;
+}
+h4 {
+    font-size: 26px;
+    line-height: 1.6em; 
+}
+h5 {
+    font-size: 20px;
+    line-height: 1.6em;
+}
+h6 {
+    font-size: 18px;
+    line-height: 1.8;
+}
+p{
+    margin-bottom: 20px;
+}
+strong{
+    font-weight: 700;
+}
+b{
+    font-weight: 700;
+}
+i {
+    font-style: italic;
+}
+.container-fluid{
+    padding-left: 6vw;
+    padding-right: 6vw;
+    @media #{$md_device}{
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    @media #{$sm_mobile}{
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+}
+
+.pt-120{
+    padding-top: 120px;
+}
+.pb-120{
+    padding-bottom: 120px;
+}
+.pt-150{
+    padding-top: 150px;
+}
+.pb-150{
+    padding-bottom: 150px;
+}
+.pt-50{
+    padding-top: 50px;
+}
+.pb-50{
+    padding-bottom: 50px;
+}
+
+.pb-80{
+    padding-bottom: 80px;
+}
+.pt-80{
+    padding-top: 80px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.mb-40{
+    margin-bottom: 40px;
+}
+
+.mt-40{
+    margin-top: 40px;
+}
+.mb-75{
+    margin-bottom: 75px;
+}
+.word{
+    display: inline-block;
+    .char{
+        display: inline-block;
+    }
+}
+.mb-70 {
+    margin-bottom: 70px;
+}
+.bg-main{
+    background: #F6F9FB;
+}
+.btn-box{
+    height: 63px;
+    width: 63px;
+    border: 1px solid #B9B9B9;
+    text-align: center;line-height: 40px;
+    @extend %d-flex-center-vh;
+    @include transition(all 0.35s);
+    svg{
+        @include transition(all 0.35s);
+        width: 30px;
+        fill: #B9B9B9;
+    }
+    &:hover{
+        background: #fff;
+        border-color: #fff;
+        svg{
+            fill: #05161D;
+        }
+    }
+}
+
+

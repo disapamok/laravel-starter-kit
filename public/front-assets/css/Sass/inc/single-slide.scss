@@ -1,0 +1,154 @@
+.single-slideshow-area{
+	height: 80vh;
+	width: 100%;
+	position: relative;
+  .single-slide-bg{
+      height: 100%;
+      width: 100%;
+      z-index: 5;
+      .swiper-slide {
+        overflow: hidden;
+      }
+      .slide-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+      }
+  }
+
+.box-btn-slide{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 550px;
+	z-index: 20;
+}
+
+  .slideshow-control{
+    .swiper-pagination-bullet{
+      opacity: 1;
+    }
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10; 
+    .swiper-pagination-bullet{
+      height: auto;
+      width: auto;
+      border-radius: 0;
+      background: transparent;
+      margin: 0;
+      padding: 0;
+    }
+    .counter-slideshow{
+      position: relative;
+      height: 110px;
+      width:270px;
+      .counter-area{
+        position: absolute;
+        top: 0;
+        left: 0;
+        @extend %d-flex-center-vh;
+        .caption-area{
+          .cap-info{
+            color: #fff;
+            font-size: 14px;
+            display: inline-block;
+            @include transform(translateX(-20px));
+            @include transition(cubic-bezier(.6,-0.28,.74,.05) 0.6s);
+            opacity: 0;
+          }
+        }
+        .counter{
+          position: relative;
+          right: 41px;
+          z-index: -1;
+          overflow: hidden;
+          .counter-num{
+            color: #fff;
+            font-size: 90px;
+            font-family: $ff-u-b;
+            font-weight: 600;
+            display: inline-block;
+            line-height: 100px;
+            opacity: 0;
+            font-family: $ff-m;
+            @include transform(translateY(50%));
+            @include transition(cubic-bezier(.55,.06,.68,.19) 0.6s);
+          }
+        }
+      }
+      // Active Slide
+      .counter-area.swiper-pagination-bullet-active{
+        .cap-info{
+          opacity: 1;
+          transition-delay: 0.4s;
+          @include transform(translateX(0));
+          transition-delay: 0.4s;
+        }
+        .counter{
+          .counter-num{
+            @include transform(translateY(0));
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .slideshow-pagination{
+      display: inline-block;
+      .pagination{
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 3px solid;
+        border-color: rgba(255, 255, 255, .8);
+        margin-right:29px;
+        @include transition(all 0.35s);
+        position: relative;
+        .pagination-line{
+          height: 3px;
+          width: 0;
+          background: rgba(255, 255, 255, .8);
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          left: 200%;
+          @include transform(translateY(-50%));
+          @include transition(all 0.35s);
+        }
+      }
+      .pagination.swiper-pagination-bullet-active{
+        background:  rgba(255, 255, 255, .8);
+        margin-right:52px;
+        .pagination-line{
+          width: 30px;
+        }
+      }
+    }
+    .eskor-slide-nav{
+      position: absolute;
+      right: 33px;
+      top: 8px;
+      z-index: 10;
+      .next,.prev{
+      	cursor: pointer;
+        svg{
+          width: 15px;
+          path{
+            fill: #fff;
+          }
+        }
+      }
+      .next{
+        margin-top: 25px;
+      }
+      
+    }
+  }
+}
