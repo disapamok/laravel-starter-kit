@@ -9,28 +9,13 @@ use stdClass;
 
 class SidebarProvider extends ServiceProvider
 {
-    /**
-     * Register services.
-     *
-     * @return void
-     */
     public function register()
     {
         //
     }
 
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
     public function boot()
     {
-        //$routeCollection = Route::getRoutes();
-
-        // foreach ($routeCollection as $value) {
-        //     echo $value->getPath();
-        // }
 
         $except = ['api','admin/does'];
         $groups = array();
@@ -54,7 +39,6 @@ class SidebarProvider extends ServiceProvider
                 array_push($groups[$key]['items'],$std);
             }
         }
-        //dd($groups);
         View::share('Menu', $groups);
     }
 }

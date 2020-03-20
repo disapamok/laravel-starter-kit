@@ -49,4 +49,12 @@ class Modal{
         return $this;
     }
 
+    public function getRules(){
+        $validationRules = array();
+        foreach($this->getFields() as $field){
+            if($field->hasRule())
+                $validationRules[$field->getName()] = $field->getRules();
+        }
+        return $validationRules;
+    }
 }

@@ -22,7 +22,7 @@
                                             <a href="javascript:void(0);" class="waves-effect"><i class="ti-email"></i><span> {{$menuItem['title']}}  <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
                                             <ul class="submenu">
                                                 @foreach ($menuItem['items'] as $item)
-                                                    <li><a href="{{route('homepage.slider')}}">{{$item->title}}</a></li>
+                                                    <li><a href="{{route($item->name)}}">{{$item->title}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </li>

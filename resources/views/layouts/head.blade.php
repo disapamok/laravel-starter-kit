@@ -9,4 +9,5 @@
 <link href="{{ URL::asset('plugins/dropzone/dist/dropzone.css') }}" rel="stylesheet" type="text/css">
 <link href="{{ URL::asset('assets/css/icons.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ URL::asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css" />
 

@@ -86,4 +86,8 @@ class Component{
     public function getUploadDir(){
         return $this->uploadDir;
     }
+
+    public function getName(){
+        return $this->name;
+    }
 }

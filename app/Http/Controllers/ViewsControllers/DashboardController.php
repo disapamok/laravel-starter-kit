@@ -12,4 +12,8 @@ class DashboardController extends Controller
         return view('index');
     }
 
+    public function showCustomers(){
+
+    }
+
 }

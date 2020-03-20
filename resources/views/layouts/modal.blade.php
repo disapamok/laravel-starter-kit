@@ -6,6 +6,13 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
+                @if($errors->first())
+                <div class="popup-errors">
+                    @foreach($errors->all() as $error)
+                        <p>{{$error}}</p>
+                    @endforeach
+                </div>
+                @endif
                 <form data-modal="{{$modal->id}}" method="POST" action="{{$modal->action}}" enctype='multipart/form-data'>
                     {{csrf_field()}}
                     @foreach ($modal->fields as $field)
